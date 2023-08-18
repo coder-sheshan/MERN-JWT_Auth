@@ -6,8 +6,6 @@ const LogIn = () => {
   return (
     <div className='flex items-center gap-10 p-5 m-0 justify-center  w-full h-[100%]' >
         <Imagepage/>
-
-        
         <InputScreen/>
     </div>
   )
