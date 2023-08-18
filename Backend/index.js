@@ -1,12 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-//Connect Database
-const db = require('./Config/db.config');
-// db();
+const db = require('./Config/db.config')
 // create express app
 const app = express();
 //cors
 const cors = require("cors");
+// db
+db();
 //session
 const session = require('express-session');
 // Setup server port
@@ -22,11 +22,11 @@ app.use('/api/v1/', Routes)
 //explore cors
 app.use(cors());
 // Set up Express session
-app.use(session({
-  secret: 'your-session-secret',
-  resave: false,
-  saveUninitialized: false
-}));
+// app.use(session({
+//   secret: 'your-session-secret',
+//   resave: false,
+//   saveUninitialized: false
+// }));
 // listen for requests
 app.get('/', (req, res) => {
   res.send("Hello World");
